@@ -1,0 +1,14 @@
+{
+  "files": {
+    "main.css": "/static/css/main.048304ae.css",
+    "main.js": "/static/js/main.d5420846.js",
+    "static/media/clear_day_small.png": "/static/media/clear_day_small.152d585ec661b6d7efd0.png",
+    "index.html": "/index.html",
+    "main.048304ae.css.map": "/static/css/main.048304ae.css.map",
+    "main.d5420846.js.map": "/static/js/main.d5420846.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.048304ae.css",
+    "static/js/main.d5420846.js"
+  ]
+}
