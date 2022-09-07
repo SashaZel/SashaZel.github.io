@@ -81,24 +81,13 @@ p {
 }
 
 .hero__left {
-    position: relative;
-    display: flex;
-    justify-content: right;
-}
-
-.hero__left-rect {
-    margin: 1rem 0;
     height: 500px;
-    width: 50rem;
+    width: 100%;
     margin-left: -10%;
+    background-image: url("images/portrait.png");
+    background-repeat: no-repeat;
+    background-position: right;
     background-color: var(--dark-grey-color);
-}
-
-.hero__left img{
-    margin: 1rem 5% 1rem auto;
-    height: 500px;
-    position: absolute;
-    overflow: hidden;
 }
 
 .hero__right p {
