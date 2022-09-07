@@ -88,16 +88,17 @@ p {
 
 .hero__left-rect {
     margin: 1rem 0;
-    height: 600px;
+    height: 500px;
     width: 50rem;
     margin-left: -10%;
     background-color: var(--dark-grey-color);
 }
 
 .hero__left img{
-    margin: 1rem 0;
-    height: 600px;
+    margin: 1rem 5% 1rem auto;
+    height: 500px;
     position: absolute;
+    overflow: hidden;
 }
 
 .hero__right p {
