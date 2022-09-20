@@ -1,12 +1,12 @@
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap");
 
 :root {
     --black-color: #202020;
-    --yellow-color: #ECD05B;
-    --light-grey-color: #EAEAEA;
-    --medium-grey-color: #8A888D;
+    --yellow-color: #ecd05b;
+    --light-grey-color: #eaeaea;
+    --medium-grey-color: #8a888d;
     --dark-grey-color: #535655;
-    --sepia-color: #C7BEB7;
+    --sepia-color: #c7beb7;
 
     /* ========== Typography =========== */
 
@@ -36,7 +36,7 @@
     }
 }
 
-*{
+* {
     box-sizing: border-box;
     margin: 0;
     padding: 0;
@@ -44,10 +44,11 @@
 
 html {
     overflow-x: hidden;
+    scroll-behavior: smooth;
 }
 
-body{
-    font-family: 'Inter', sans-serif;
+body {
+    font-family: "Inter", sans-serif;
     background-color: var(--black-color);
     overflow-x: hidden;
 }
@@ -71,11 +72,9 @@ ul {
     width: 90%;
     max-width: 700px;
     margin: 0 auto;
-
 }
 
 .header__container {
-
     padding: 1rem 0;
     color: var(--yellow-color);
     display: flex;
@@ -117,6 +116,43 @@ ul {
 .cover__typography-row span {
     margin-right: -0.7rem;
     text-shadow: -10px 0px 10px black;
+}
+
+.cover__right h2 {
+    margin-top: 2rem;
+    color: var(--light-grey-color);
+    font-weight: 400;
+    font-size: var(--medium-header);
+}
+
+.cover__right p {
+    margin: 2rem 0;
+}
+
+.cover__right button {
+    margin-bottom: 2rem;
+    padding: 1rem;
+    color: var(--black-color);
+    font-size: 1.2rem;
+    font-weight: 600;
+    background-color: var(--yellow-color);
+    box-shadow: 7px 7px var(--dark-grey-color);
+    border: none;
+    outline: 2px solid black;
+}
+
+.cover__right button:hover {
+    transform: translate(2px, 2px);
+    box-shadow: 3px 3px var(--dark-grey-color);
+    transition: 0.3s;
+}
+
+.cover__right button:active,
+.cover__right button:focus {
+    color: var(--dark-grey-color);
+    transform: translate(2px, 2px);
+    box-shadow: 7px 7px var(--dark-grey-color);
+    transition: 0.3s;
 }
 
 .hero {
@@ -197,11 +233,16 @@ ul {
     color: var(--dark-grey-color);
 }
 
+.swiper__container {
+    background-color: var(--light-grey-color);
+}
+
 .swiper {
     width: 100%;
+    max-width: 1024px;
     height: 100%;
     background-color: var(--light-grey-color);
-  }
+}
 
 .swiper-slide {
     text-align: center;
@@ -228,11 +269,8 @@ ul {
     font-weight: 800;
     font-size: 3rem;
     color: var(--light-grey-color);
-    text-shadow:
-        -1px -1px 0 var(--yellow-color),
-         1px -1px 0 var(--yellow-color),
-        -1px 1px 0 var(--yellow-color),
-         1px 1px 0 var(--yellow-color);
+    text-shadow: -1px -1px 0 var(--yellow-color), 1px -1px 0 var(--yellow-color),
+        -1px 1px 0 var(--yellow-color), 1px 1px 0 var(--yellow-color);
 }
 
 .swiper-slide__description {
@@ -248,7 +286,108 @@ ul {
 
 .swiper-slide__description-text {
     width: 50%;
-    text-align: left;;
+    text-align: left;
+}
+
+.longread h4 {
+    margin-top: 3rem;
+    font-size: var(--small-header);
+    color: var(--light-grey-color);
+}
+
+.longread p {
+    margin: 0.5rem 0;
+}
+
+.longread a {
+    font-weight: 600;
+}
+
+.contact {
+    color: var(--light-grey-color);
+}
+
+.contact__left {
+    padding: 5rem 0 2rem 0;
+}
+
+.contact__left h3 {
+    font-weight: 800;
+    font-size: var(--medium-header);
+    color: var(--black-color);
+    text-shadow: -1px -1px 0 var(--light-grey-color),
+        1px -1px 0 var(--light-grey-color), -1px 1px 0 var(--yellow-color),
+        2px 2px 0 var(--yellow-color);
+}
+
+.contact__left h5 {
+    margin-top: 1rem;
+    font-size: var(--small-header);
+}
+
+.contact__right-container {
+    margin: 2rem 0;
+    padding: 1rem;
+    color: var(--black-color);
+    font-weight: 600;
+    background-color: var(--light-grey-color);
+}
+
+.contact__right-form label,
+.contact__right-form input {
+    padding: 0.2rem;
+    width: 100%;
+    display: block;
+}
+
+.contact__right-form textarea {
+    padding: 0.2rem;
+    width: 100%;
+    min-height: 5rem;
+    resize: none;
+}
+
+.contact__right-form-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    column-gap: 1rem;
+}
+
+.contact__right-form-element {
+    margin: 0.5rem 0;
+    width: 100%;
+}
+
+.contact__right-form-element button {
+    margin-top: 1rem;
+    width: 100%;
+    padding: 0.5rem;
+    color: var(--black-color);
+    font-weight: 600;
+    background-color: var(--yellow-color);
+    box-shadow: 10px 10px var(--medium-grey-color);
+}
+
+.contact__right-form-element button:hover {
+    transform: translate(2px, 2px);
+    box-shadow: 7px 7px var(--dark-grey-color);
+    transition: 0.3s;
+}
+
+.contact__right-form-element button:active,
+.contact__right-form-element button:focus {
+    color: var(--medium-grey-color);
+    transform: translate(2px, 2px);
+    box-shadow: 7px 7px var(--dark-grey-color);
+    border: 2px solid var(--medium-grey-color);
+    transition: 0.3s;
+}
+
+.contact__right-form-element p {
+    color: var(--dark-grey-color);
+    font-weight: 400;
+    background-color: #fff;
 }
 
 .photo {
@@ -256,11 +395,45 @@ ul {
 }
 
 .photo__background-bw {
-    height: 65vw;
     background-image: url("images/bw-background-photo-big.jpg");
     background-repeat: no-repeat;
-    background-size: contain;
+    background-attachment: fixed;
+    background-size: cover;
+    background-position: bottom;
     background-color: black;
+}
+
+.photo__background-bw-large {
+    height: 100vh;
+    transition: 1s;
+}
+
+.photo__background-bw-small {
+    height: 50vh;
+    transition: 1s;
+}
+
+.photo__background-bw-very-small {
+    height: 10vh;
+    transition: 2s;
+}
+
+.photo__background-bw-content {
+    display: flex;
+    justify-content: end;
+}
+
+.photo__background-bw-content p {
+    padding: 1rem;
+    margin: 1rem;
+    background-color: black;
+}
+
+.photo__background-flickr-logo {
+    margin-left: 0.5rem;
+    margin-right: 0.5rem;
+    height: 2rem;
+    vertical-align: -0.5rem;
 }
 
 .books {
@@ -268,36 +441,24 @@ ul {
     background-color: var(--sepia-color);
 }
 
-.books__right h3 {
-    margin: 1.3rem 0 0.5rem 0;
+.books__image h3 {
+    margin: 2rem 0 0.5rem 0;
     font-size: var(--small-header);
     border-bottom: 1px solid black;
 }
 
-.books__right h4 {
+.books__image-vertical {
     margin-top: 1rem;
-    font-size: var(--normal-font);
-    font-weight: 400;
-    color: var(--dark-grey-color);
+    margin-bottom: 1rem;
+    width: 100%;
+    display: block;
 }
 
-.books__right h5 {
-    margin: 0.5rem 0;
-    font-size: var(--normal-font);
-}
-
-.books__right p {
-    margin-left: 4rem;
-    text-indent: -4rem;
-    color: black;
-}
-
-.books__right p:hover {
-    transform: translateX(-1px);
-}
-
-.books__right span {
-    color: var(--dark-grey-color);
+.books__image-horizontal {
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+    width: 100%;
+    display: none;
 }
 
 .music {
@@ -324,11 +485,8 @@ ul {
 .music__header h3 {
     font-size: var(--big-header);
     color: var(--yellow-color);
-    text-shadow:
-        -1px -1px 0 var(--black-color),
-         1px -1px 0 var(--black-color),
-        -1px 1px 0 var(--black-color),
-         1px 1px 0 var(--black-color);
+    text-shadow: -1px -1px 0 var(--black-color), 1px -1px 0 var(--black-color),
+        -1px 1px 0 var(--black-color), 1px 1px 0 var(--black-color);
 }
 
 .music__header-right {
@@ -392,7 +550,6 @@ ul {
 }
 
 @media screen and (min-width: 1024px) {
-
     .container {
         max-width: 1024px;
     }
@@ -401,7 +558,6 @@ ul {
         display: grid;
         grid-template-columns: repeat(2, 1fr);
         gap: 1rem;
-
     }
 
     .skills__container {
@@ -421,6 +577,36 @@ ul {
         max-width: 700px;
         display: grid;
         grid-template-columns: 1fr 1fr;
+    }
+
+    .contact {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .photo__background-bw {
+        background-size: contain;
+    }
+
+    .photo__background-bw-large {
+        height: 65vw;
+    }
+
+    .photo__background-bw-small {
+        height: 32vw;
+    }
+
+    .photo__background-bw-very-small {
+        height: 10vw;
+        transition: 1s;
+    }
+
+    .books__image-vertical {
+        display: none;
+    }
+    
+    .books__image-horizontal {
+        display: block;
     }
 
     .footer__right {
