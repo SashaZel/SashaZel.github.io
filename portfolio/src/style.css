@@ -14,6 +14,8 @@
     --medium-header: 2rem;
     --small-header: 1.5rem;
     --normal-font: 1rem;
+
+    --swiper-theme-color: #535655;
 }
 
 /* ====== Responsive typography ========= */
@@ -395,9 +397,10 @@ ul {
 }
 
 .photo__background-bw {
-    background-image: url("images/bw-background-photo-big.jpg");
+    background-image: url("images/bw-background-photo-small.jpg");
     background-repeat: no-repeat;
     background-attachment: fixed;
+    background-size: auto 100vh;
     background-size: cover;
     -webkit-background-size: cover;
     background-position: bottom;
@@ -548,6 +551,14 @@ ul {
 .footer__right-social_icon {
     height: 1.4rem;
     fill: var(--light-grey-color);
+}
+
+@media screen and (min-width: 660px) {
+
+    .photo__background-bw {
+        background-image: url("images/bw-background-photo-big.jpg");
+    }
+
 }
 
 @media screen and (min-width: 1024px) {
