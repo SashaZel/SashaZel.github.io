@@ -70,6 +70,10 @@ ul {
   font-size: var(--normal-font);
 }
 
+span[draggable]:hover {
+  cursor: grab;
+}
+
 .container {
   width: 90%;
   max-width: 700px;

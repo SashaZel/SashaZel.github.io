@@ -1,3 +1,33 @@
+// ================ Drag' custom animation ==========
+
+const theLetter = document.querySelector('#the-letter');
+
+const targetCoord = {
+  x: 0,
+  y: 0,
+}
+
+theLetter.addEventListener('drag', (e)=> {
+  if (!targetCoord.x) {
+    targetCoord.x = e.x;
+  }
+  if (!targetCoord.y) {
+    targetCoord.y = e.y;
+  }
+  console.log('drag to ', e.x);
+  console.log('styles ', theLetter.style.transform)
+  
+  if (e.x) {
+    theLetter.style.transform = `translate(${e.x - targetCoord.x}px, ${e.y - targetCoord.y}px)`;
+  }
+});
+
+
+
+theLetter.addEventListener('dragend', ()=>{
+  //theLetter.style.transform = '';
+});
+
 // ===================== Swiper carousel ==================
 
 var swiper = new Swiper(".mySwiper", {
