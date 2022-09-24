@@ -4,11 +4,11 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Alexander Zelenkov</title>
-    <link rel="stylesheet" href="src/style.css" />
     <link
-      rel="stylesheet"
-      href="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.css"
+    rel="stylesheet"
+    href="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.css"
     />
+    <link rel="stylesheet" href="src/style.css" />
   </head>
 
   <body>
@@ -29,17 +29,17 @@
             <div class="cover__typography-rect"></div>
             <div class="cover__typography-box">
               <div class="cover__typography-row">
-                <span>P</span>
-                <span>O</span>
-                <span>R</span>
-                <span id="the-letter" draggable="true">T</span>
+                <span class="the-letter" draggable="true">P</span>
+                <span class="the-letter" draggable="true">O</span>
+                <span class="the-letter" draggable="true">R</span>
+                <span class="the-letter" draggable="true">T</span>
               </div>
               <div class="cover__typography-row">
-                <span>F</span>
-                <span>O</span>
-                <span>L</span>
-                <span>I</span>
-                <span>O</span>
+                <span class="the-letter" draggable="true">F</span>
+                <span class="the-letter" draggable="true">O</span>
+                <span class="the-letter" draggable="true">L</span>
+                <span class="the-letter" draggable="true">I</span>
+                <span class="the-letter" draggable="true">O</span>
               </div>
             </div>
           </div>
@@ -49,7 +49,7 @@
               My name's Alexander Zelenkov. I craft simple pages and web
               application using modern frontend web technologies.
             </p>
-            <button>Contact Me ></button>
+            <a href="#contact-point">Contact Me ></a>
           </div>
         </div>
       </section>
@@ -254,7 +254,7 @@
         </div>
       </article>
       <article>
-        <div class="container contact">
+        <div class="container contact" id="contact-point">
           <div class="contact__left">
             <h3>Want to discuss a new project?</h3>
             <h5>Get in touch.</h5>
@@ -549,6 +549,7 @@
         </div>
       </div>
     </footer>
+    <a href="index-rus.html" class="lang">RUS</a>
     <!--============ FOOTER =============-->
     <!--============ SCRIPTS =============-->
     <script src="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.js"></script>

@@ -121,7 +121,7 @@ span[draggable]:hover {
 
 .cover__typography-row span {
   margin-right: -0.7rem;
-  text-shadow: -10px 0px 10px black;
+  text-shadow: -10px 0px 10px black, 1px 0px 0px black;
 }
 
 .cover__right h2 {
@@ -135,9 +135,10 @@ span[draggable]:hover {
   margin: 2rem 0;
 }
 
-.cover__right button {
+.cover__right a {
   margin-bottom: 2rem;
   padding: 1rem;
+  display: inline-block;
   color: var(--black-color);
   font-size: 1.2rem;
   font-weight: 600;
@@ -147,7 +148,7 @@ span[draggable]:hover {
   outline: 2px solid black;
 }
 
-.cover__right button:hover {
+.cover__right a:hover {
   transform: translate(2px, 2px);
   box-shadow: 3px 3px var(--dark-grey-color);
   transition: 0.3s;
@@ -521,9 +522,6 @@ span[draggable]:hover {
 
 .footer__container {
   padding: 2rem 0;
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: 1rem;
 }
 
 .footer__left {
@@ -536,6 +534,10 @@ span[draggable]:hover {
   font-weight: 600;
 }
 
+.footer__right {
+  display: flex;
+}
+
 .footer__right-social_element {
   color: var(--light-grey-color);
 }
@@ -545,9 +547,13 @@ span[draggable]:hover {
   opacity: 0.5;
 }
 
-.footer__right-social_element span,
-.footer__right-social_element svg {
+.footer__right-social_element span {
   margin: 0.5rem 0;
+  display: none;
+}
+
+.footer__right-social_element svg {
+  margin: 0.5rem 0.5rem;
   display: inline-block;
   vertical-align: middle;
 }
@@ -555,6 +561,19 @@ span[draggable]:hover {
 .footer__right-social_icon {
   height: 1.4rem;
   fill: var(--light-grey-color);
+}
+
+.lang {
+  position: fixed;
+  right: 1rem;
+  bottom: 2rem;
+  padding: 1rem;
+  color: var(--black-color);
+  font-weight: 600;
+  background: var(--light-grey-color);
+  border: 1px solid black;
+  box-shadow: 3px 3px 3px black;
+  z-index: 5;
 }
 
 @media screen and (min-width: 660px) {
@@ -566,6 +585,29 @@ span[draggable]:hover {
     background-size: cover;
     -webkit-background-size: cover;
     background-position: bottom;
+  }
+
+  .footer__container {
+    padding: 2rem 0;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1rem;
+  }
+
+  .footer__right {
+    display: block;
+  }
+
+  .footer__right-social_element span {
+    margin: 0.5rem 0;
+    display: inline-block;
+    vertical-align: middle;
+  }
+  
+  .footer__right-social_element svg {
+    margin: 0.5rem 0;
+    display: inline-block;
+    vertical-align: middle;
   }
 }
 
@@ -632,5 +674,11 @@ span[draggable]:hover {
   .footer__right {
     display: flex;
     column-gap: 1.5rem;
+  }
+
+  .lang {
+    position: fixed;
+    right: 3rem;
+    bottom: 3rem;
   }
 }

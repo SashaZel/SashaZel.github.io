@@ -1,32 +1,33 @@
 // ================ Drag' custom animation ==========
 
-const theLetter = document.querySelector('#the-letter');
+const theLetters = document.querySelectorAll('.the-letter');
+console.log('theLetter ', theLetters)
 
-const targetCoord = {
-  x: 0,
-  y: 0,
+const targetCoords = [];
+
+for (let i = 0; i < theLetters.length; i++) {
+
+  targetCoords[i] = {
+    x: 0,
+    y: 0,
+  };
+
+  theLetters[i].addEventListener('drag', (e)=> {
+    if (!targetCoords[i].x) {
+      targetCoords[i].x = e.x;
+    }
+    if (!targetCoords[i].y) {
+      targetCoords[i].y = e.y;
+    }
+    // console.log(e);
+    // console.log('drag to ', e.x);
+    // console.log('styles ', e.target.style.transform)
+    
+    if (e.x) {
+      e.target.style.transform = `translate(${e.x - targetCoords[i].x}px, ${e.y - targetCoords[i].y}px)`;
+    }
+  });
 }
-
-theLetter.addEventListener('drag', (e)=> {
-  if (!targetCoord.x) {
-    targetCoord.x = e.x;
-  }
-  if (!targetCoord.y) {
-    targetCoord.y = e.y;
-  }
-  console.log('drag to ', e.x);
-  console.log('styles ', theLetter.style.transform)
-  
-  if (e.x) {
-    theLetter.style.transform = `translate(${e.x - targetCoord.x}px, ${e.y - targetCoord.y}px)`;
-  }
-});
-
-
-
-theLetter.addEventListener('dragend', ()=>{
-  //theLetter.style.transform = '';
-});
 
 // ===================== Swiper carousel ==================
 
