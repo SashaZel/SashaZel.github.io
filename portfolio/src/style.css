@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Caveat&family=Inter:wght@400;600;800&display=swap');
 
 :root {
   --black-color: #202020;
@@ -70,10 +70,6 @@ ul {
   font-size: var(--normal-font);
 }
 
-span[draggable]:hover {
-  cursor: grab;
-}
-
 .container {
   width: 90%;
   max-width: 700px;
@@ -106,6 +102,31 @@ span[draggable]:hover {
   line-height: 80%;
 }
 
+.cover__typography-arrow {
+  display: none;
+  position: absolute;
+  font-size: 1.5rem;
+  font-weight: 400;
+  font-family: 'Caveat', cursive;
+  transform: translateX(340px) translateY(-300px) rotate(340deg);
+  animation: arrow-header-animation 2s ease forwards 1s;
+}
+
+.cover__typography-box svg {
+  display: none;
+  position: absolute;
+  opacity: 0.7;
+  color: var(--yellow-color);
+  transform: translateX(290px) translateY(-30px) rotate(0deg);
+
+}
+
+.cover__typography-box path {
+  stroke-dasharray: 220;
+  stroke-dashoffset: 220;
+  animation: line-animation 2s ease forwards 1.5s;
+}
+
 .cover__typography-rect {
   margin: 5rem 0;
   height: 20rem;
@@ -122,6 +143,16 @@ span[draggable]:hover {
 .cover__typography-row span {
   margin-right: -0.7rem;
   text-shadow: -10px 0px 10px black, 1px 0px 0px black;
+}
+
+.cover__typography-row:nth-child(3) {
+  transform: translateX(100vw);
+  animation: letter-animation 1s ease forwards 0s;
+}
+
+.cover__typography-row:nth-child(4) {
+  transform: translateX(100vw);
+  animation: letter-animation 1s ease forwards 0.3s;
 }
 
 .cover__right h2 {
@@ -205,6 +236,16 @@ span[draggable]:hover {
 
 .hero__right p {
   color: black;
+}
+
+.hero__right a {
+  text-decoration: underline;
+  font-weight: 600;
+}
+
+.hero__right a:hover,
+.hero__right a:active {
+  color: var(--dark-grey-color);
 }
 
 .skills {
@@ -553,7 +594,7 @@ span[draggable]:hover {
 }
 
 .footer__right-social_element svg {
-  margin: 0.5rem 0.5rem;
+  margin: 1rem 1rem 0.5rem 0;
   display: inline-block;
   vertical-align: middle;
 }
@@ -577,6 +618,19 @@ span[draggable]:hover {
 }
 
 @media screen and (min-width: 660px) {
+
+  .cover__typography-arrow {
+    display: block;
+  }
+
+  .cover__typography-box svg {
+    display: block;
+  }
+
+  span[draggable]:hover {
+    cursor: grab;
+  }
+
   .photo__background-bw {
     background-image: url("images/bw-background-photo-big.jpg");
     background-repeat: no-repeat;
@@ -620,6 +674,10 @@ span[draggable]:hover {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     gap: 1rem;
+  }
+
+  .cover__right h2 {
+    margin-top: 7rem;
   }
 
   .skills__container {
@@ -680,5 +738,23 @@ span[draggable]:hover {
     position: fixed;
     right: 3rem;
     bottom: 3rem;
+  }
+}
+
+@keyframes line-animation {
+  to {
+    stroke-dashoffset: 0;
+  }
+}
+
+@keyframes letter-animation {
+  to {
+    transform: translateX(0px) translateY(0px);
+  }
+}
+
+@keyframes arrow-header-animation {
+  to {
+    transform: translateX(340px) translateY(-95px) rotate(340deg);
   }
 }
