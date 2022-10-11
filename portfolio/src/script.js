@@ -1,19 +1,18 @@
 // ================ Drag' custom animation ==========
 
 function repiortResize() {
-  console.log('width more than 660');
-  const theLetters = document.querySelectorAll('.the-letter');
-  
+  //console.log('width more than 660');
+  const theLetters = document.querySelectorAll(".the-letter");
+
   const targetCoords = [];
-  
+
   for (let i = 0; i < theLetters.length; i++) {
-  
     targetCoords[i] = {
       x: 0,
       y: 0,
     };
-  
-    theLetters[i].addEventListener('drag', (e)=> {
+
+    theLetters[i].addEventListener("drag", (e) => {
       if (!targetCoords[i].x) {
         targetCoords[i].x = e.x;
       }
@@ -23,9 +22,11 @@ function repiortResize() {
       // console.log(e);
       // console.log('drag to ', e.x);
       // console.log('styles ', e.target.style.transform)
-      
+
       if (e.x) {
-        e.target.style.transform = `translate(${e.x - targetCoords[i].x}px, ${e.y - targetCoords[i].y}px)`;
+        e.target.style.transform = `translate(${e.x - targetCoords[i].x}px, ${
+          e.y - targetCoords[i].y
+        }px)`;
       }
     });
   }
@@ -37,16 +38,13 @@ if (window.innerWidth > 660) {
   repiortResize();
   windowWidthWide = true;
 } else {
-  window.addEventListener('resize', ()=> {
+  window.addEventListener("resize", () => {
     if (window.innerWidth > 660 && !windowWidthWide) {
       repiortResize();
       windowWidthWide = true;
     }
   });
 }
-
-
-
 
 // ===================== Swiper carousel ==================
 
